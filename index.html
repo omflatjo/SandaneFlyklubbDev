@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sandane Flyklubb</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/heim.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/navbar_hamburger_button.css">
+        <script defer src="scripts/moveToTop.js"></script>
+        <script defer src="scripts/navbar.js" ></script>
+        <script defer src="scripts/navbarHamburgerButton.js"></script>
+        <script defer src="scripts/dropdowns.js"></script>
+        <script defer src="scripts/footer.js"></script>
+    </head>
+    <body>
+        <!-- Title and navbar is set here through navbar.js -->
+        <div id="activeTab" style="display: none;">Heim</div> <!--Used to pass info to navbar about current location-->
+        <div id="screen">
+            <video autoplay muted loop>
+                <source src="images/heim/flight_video_main_screen.mp4" type="video/mp4">
+                <source src="images/heim/flightvideo_main_screen.webm" type="video/webm">
+                <p>Your browser does not support any of the video formats (MP4 and WEBM) provided by this webpage.</p>
+            </video>
+        </div>
+
+        <div class="section">
+            <h2>Vår visjon</h2>
+            <h3>
+            Sandane Flyklubb er eit lite miljø med lange tradisjonar. Klubben er bygd opp av eldsjelar med stor lidenskap for flyging.
+            Vi ønskar å vere eit opent miljø for flyinteresserte i alle aldrar og på den måten spre interesse for flyging til nytte for både 
+            folk og samfunn.
+            </h3>
+           <!-- Redirecting to Om oss html page -->
+            <button class="button" onclick="window.location.href='om_oss.html';">Om oss</button>
+        </div>
+
+        <!-- Section consisting of 3 photos and 3 paragraphs with some catchy - and informative - phrases-->
+        <div class="section">
+            <h2>Flyplass</h2>
+            <div class="container">
+                <div class="left_box">
+                    <h3 class="middle">Klubben held til ved Sandane lufthamn, Anda(ENSD). Her har vi vår eigen hangar som rommar både folk og fly.</h3>
+                </div>
+                <img class="right_box" id="airport" src="images/heim/sandaneAirport.jpg" alt="Anda Flygplass">
+            </div>
+            <div class="container">
+                <div class="left_box">
+                    <img id="flight" src="images/heim/flight.jpg" alt="Rød flyvemaskin">
+                </div>
+                <div class="right_box">
+                    <h3 class="middle">Av og til arrangerar vi airshow med flymaskiner frå heile noreg.  </h3></div>
+                </div>
+            <div class="container">
+                <div class="left_box">
+                    <h3 class="middle">Her kjem menneske i alle aldrar, ei er du for ung, og ei er du for gamal!</h3>
+                </div>
+                <img class="right_box" id="generation" src="images/heim/vafle.jpg" alt="Flygare og vaffelsteking">
+            </div>
+            <!-- Button which acts through a script to scroll up to the top of the page -->
+            <button class="button" id="topButton" onclick="scrollToTop()" title="Go to top">Ta meg til toppen</button>
+            <br>
+            
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+    </body>
+</html>
