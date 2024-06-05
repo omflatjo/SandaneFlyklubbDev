@@ -13,10 +13,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0);
     padding: 10px 20px;
-    transition: top 0.3s;
+    transition: background 0.3s, top 0.3s;
     z-index: 1000;
+}
+
+header.visible {
+    background: rgba(0, 0, 0, 0.7);
 }
 
 header .logo img {
