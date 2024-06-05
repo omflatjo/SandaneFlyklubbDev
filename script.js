@@ -20,29 +20,40 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastScrollY = window.scrollY;
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
+
         if (currentScrollY > lastScrollY) {
             header.style.top = '-60px';
         } else {
             header.style.top = '0';
         }
+
+        if (currentScrollY > 0) {
+            header.classList.add('visible');
+        } else {
+            header.classList.remove('visible');
+        }
+
         lastScrollY = currentScrollY;
 
         const scrollSpeed = 0.5;
-        const heroHeight = hero.offsetHeight;
         const scrolled = window.scrollY;
         hero.style.transform = `translateY(${scrolled * scrollSpeed}px)`;
     });
 
     let mouseTimer;
-    document.addEventListener('mousemove', () => {
-        clearTimeout(mouseTimer);
+    function showHeader() {
         header.style.top = '0';
+        if (mouseTimer) clearTimeout(mouseTimer);
         mouseTimer = setTimeout(() => {
             header.style.top = '-60px';
         }, 2000);
-    });
+    }
+
+    document.addEventListener('mousemove', showHeader);
 
     hamburger.addEventListener('click', () => {
         header.classList.toggle('show-nav');
     });
+
+    showHeader();  // Ensure the header hides initially
 });
